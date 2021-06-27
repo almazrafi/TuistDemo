@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6C1-AQ-1Zp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chats-->
+        <scene sceneID="IdW-cw-tiM">
+            <objects>
+                <tableViewController title="Chats" id="6C1-AQ-1Zp" customClass="ChatsViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="72" estimatedRowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z2v-i1-kcd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatsCell" rowHeight="72" id="XaI-Cw-Msp" customClass="ChatsCell" customModule="App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="72"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XaI-Cw-Msp" id="d7Q-kh-08V">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="RSX-IR-RgS">
+                                            <rect key="frame" x="36" y="20" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="q3e-qP-XOk"/>
+                                                <constraint firstAttribute="width" constant="32" id="yki-T0-vNC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRH-P1-A55">
+                                            <rect key="frame" x="84" y="16" width="294" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" name="Title"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48T-sX-vTM">
+                                            <rect key="frame" x="84" y="39" width="294" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="Unimportant"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="48T-sX-vTM" firstAttribute="leading" secondItem="RSX-IR-RgS" secondAttribute="trailing" constant="16" id="KFT-mi-cCk"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="48T-sX-vTM" secondAttribute="trailing" constant="16" id="LSC-VB-jQj"/>
+                                        <constraint firstAttribute="bottom" secondItem="48T-sX-vTM" secondAttribute="bottom" constant="16" id="Sro-gt-SUq"/>
+                                        <constraint firstItem="FRH-P1-A55" firstAttribute="leading" secondItem="RSX-IR-RgS" secondAttribute="trailing" constant="16" id="Z44-Do-1HY"/>
+                                        <constraint firstItem="FRH-P1-A55" firstAttribute="top" secondItem="d7Q-kh-08V" secondAttribute="top" constant="16" id="ZLq-u6-SY5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FRH-P1-A55" secondAttribute="trailing" constant="16" id="fi3-L6-6PW"/>
+                                        <constraint firstItem="RSX-IR-RgS" firstAttribute="leading" secondItem="d7Q-kh-08V" secondAttribute="leadingMargin" constant="16" id="tQN-jV-wOX"/>
+                                        <constraint firstItem="RSX-IR-RgS" firstAttribute="centerY" secondItem="d7Q-kh-08V" secondAttribute="centerY" id="wor-oG-pAG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="Background"/>
+                                <connections>
+                                    <outlet property="subtitleLabel" destination="48T-sX-vTM" id="R7m-NX-8jN"/>
+                                    <outlet property="titleLabel" destination="FRH-P1-A55" id="GS5-xK-6c2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6C1-AQ-1Zp" id="Cg3-de-gpu"/>
+                            <outlet property="delegate" destination="6C1-AQ-1Zp" id="y7k-mv-kQG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDf-De-gZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Chat" width="76" height="76"/>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Title">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Unimportant">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

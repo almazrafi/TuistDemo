@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D1q-CO-37N">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="7gc-ge-xf7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BV1-J1-oli" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Profile" image="ProfileTab" id="tWd-Eg-PjD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9f3-xg-adk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u90-j3-2cl" kind="relationship" relationship="rootViewController" id="EmK-rk-cRh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3c-Bi-ES9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="736"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pO6-R0-NTb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="D1q-CO-37N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d9b-I4-9KE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Important"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wEw-18-SRd" kind="relationship" relationship="viewControllers" id="ves-FM-Mnn"/>
+                        <segue destination="BV1-J1-oli" kind="relationship" relationship="viewControllers" id="Rqy-Sa-mhm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtr-1c-0Nf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="285"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="KSC-f8-KS2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="u90-j3-2cl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OPa-vg-vaX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNw-wM-qKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2154" y="736"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="dBN-JQ-VBZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wEw-18-SRd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chats" image="ChatsTab" id="8ep-Wo-ltA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dL4-if-jGf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VDC-wG-p0C" kind="relationship" relationship="rootViewController" id="9mT-IH-7mJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6m-O4-Fxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503" y="-169"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="IMb-8Q-BKF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chats" id="VDC-wG-p0C" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wFT-Wc-fCc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHJ-mj-lpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151" y="-169"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ChatsTab" width="24" height="24"/>
+        <image name="ProfileTab" width="24" height="24"/>
+        <namedColor name="Important">
+            <color red="0.36078431372549019" green="0.2196078431372549" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
